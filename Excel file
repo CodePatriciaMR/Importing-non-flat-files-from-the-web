@@ -1,0 +1,15 @@
+# Import package
+import pandas as pd
+
+# Assign url of file
+url = 'https://assets.datacamp.com/course/importing_data_into_r/latitude.xls'
+
+# Read in all sheets of Excel file
+xls = pd.read_excel(url, sheet_name=None)
+
+# Print the sheetnames to the shell
+print(xls.keys())
+
+# Print the head of the sheets
+print(xls['1700'].head())
+print(xls['1900'].head())
